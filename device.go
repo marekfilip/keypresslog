@@ -12,12 +12,6 @@ import (
 	"unsafe"
 )
 
-const (
-	EVENTS_PATH_TPL = "/sys/class/example/event%d/device/uevent"
-	DEVICE_FILE_TPL = "/dev/example/event%d"
-	MAX_FILES       = 255
-)
-
 type DeviceReader interface {
 	Read() (chan Event, error)
 	GetId() int

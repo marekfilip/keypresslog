@@ -1,5 +1,11 @@
 package keypresslog
 
+const (
+	EVENTS_PATH_TPL = "/sys/class/input/event%d/device/uevent"
+	DEVICE_FILE_TPL = "/dev/input/event%d"
+	MAX_FILES       = 255
+)
+
 //event types
 const (
 	EV_SYN       = 0x00
